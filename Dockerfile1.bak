@@ -1,0 +1,10 @@
+FROM node:14-alpine
+ENV NODE_ENV=production
+WORKDIR C:\Users\Admin\rest-api
+COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
+RUN npm install  --silent && mv node_modules ../
+RUN npm install nodemon
+COPY . .
+
+
+CMD ["npm", "start"]
