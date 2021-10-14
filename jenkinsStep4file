@@ -1,0 +1,16 @@
+pipeline{
+        agent any
+        stages{
+            stage('Make Directory'){
+                steps{
+                    sh "mkdir ~/jenkins-step-test"
+                }
+            }
+            stage('Make Files'){
+                steps{
+                    sh "touch ~/jenkins-step-test/file1 ~/jenkins-step-test/file2"
+                }
+            }
+        }
+}
+

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-app
+  labels:
+    app: shabana-app
+spec:
+  containers:
+  - name: shabana-app
+    image: shabana-app
