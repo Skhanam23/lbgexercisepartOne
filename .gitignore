@@ -1,0 +1,11 @@
+node_modules/
+
+logs
+*.logs
+2
+/dist
+.env
+
+.idea/
+.vscose/
+*.sw*
