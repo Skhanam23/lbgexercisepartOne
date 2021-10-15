@@ -20,6 +20,7 @@ metadata:
   labels:
     app: shabana-app
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: app-lb
@@ -30,6 +31,6 @@ spec:
      spec:    
       containers:
         - name: shabana-cluster
-          image: shabana-app
+          image: gcr.io/training-325404/shabana-app
           ports:
           - containerPort: 80
